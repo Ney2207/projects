@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ney Cordovez">
+  <title>Rick</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 8px #aaa;
+}
+
+article h2, aside h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p, footer h4 {
+  margin: 0;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 10px;
+}
+
+.contact ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media queries para ajustar el diseño según el tamaño de la pantalla */
+@media only screen and (min-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  main {
+    flex-wrap: wrap;
+  }
+
+  article, aside {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    flex-wrap: nowrap;
+  }
+
+  article, aside {
+    width: auto;
+    margin-right: 20px;
+  }
+
+  article:last-child, aside:last-child {
+    margin-right: 0;
+  }
+}
+
+video {
+    width: 100%;
+}
+  </style>
+  <script src="https://kit.fontawesome.com/0c0e61e5b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>What's up, bro!?</h1>
+    <!--<nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>-->
+  </header>
+
+  <main>
+    <article>
+      <h2>Video</h2>
+      <p></p>
+      <video controls type="video/mp4" poster="https://drive.google.com/uc?id=1CI0ceph8ezwNaJsVUcGVsQEGDbtvbLG1" src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4">
+            Video not supported!
+      </video>
+    </article>
+
+    <article>
+      <h2>Article</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at accumsan velit. Praesent faucibus consectetur felis, id facilisis arcu commodo a.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="contact">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-cat"></i></a></li>
+        <li><a href="#"><i class=""></i></a></li>
+        <li><a href="#"><i class=""></i></a></li>
+      </ul>
+    </div>
+    <p>&copy; Ney Cordovez, 2023</p>
+  </footer>
+
+</body>
+  </html>
