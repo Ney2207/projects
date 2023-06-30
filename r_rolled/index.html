@@ -130,13 +130,21 @@ video {
       window.onload = () => {
           const vid = document.getElementById("vid");
           const msg = document.getElementById("msg");
-          vid.addEventListener("play", function() {
+          /*vid.addEventListener("play", function() {
             vid.addEventListener("loadedmetadata", function() {
               setTimeout(function () {
                 msg.innerHTML = "Looks like you've been Rick-rolled 😎";
               }, 8000);
             });
+          });*/
+          vid.addEventListener("timeupdate", function() {
+            if (vid.currentTime >= 10) {
+              a();
+            }
           });
+          function a() {
+            msg.innerHTML = "Looks like you've been Rick-rolled 😎";
+          }
           const cat = document.getElementById("cat");
           cat.addEventListener("click", function () {
               alert("😺 Meow!");
