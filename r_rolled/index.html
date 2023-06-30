@@ -134,7 +134,11 @@ video {
               setTimeout(function () {
                   msg.innerHTML = "Looks like you've been Rick-rolled 😎";
               }, 8000); 
-          }); 
+          });
+          const cat = document.getElementById("cat");
+          cat.addEventListener("click", function () {
+              alert("😺 Meow!");
+          });
       }
   </script>
 </head>
@@ -171,7 +175,7 @@ video {
     <div class="contact">
       <h4>Contact</h4>
       <ul>
-        <li><a href="#"><i class="fa-solid fa-cat"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-cat" id="cat"></i></a></li>
         <li><a href="#"><i class=""></i></a></li>
         <li><a href="#"><i class=""></i></a></li>
       </ul>
