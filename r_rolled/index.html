@@ -126,6 +126,16 @@ video {
 }
   </style>
   <script src="https://kit.fontawesome.com/0c0e61e5b4.js" crossorigin="anonymous"></script>
+  <script defer>
+    const vid = document.getElementById("vid");
+    const msg = document.getElementById("msg");
+
+    vid.addEventListener("play", function () {
+      setTimeout(function () {
+        msg.innerHtml ="Looks like you've been Rick-rolled 😎";
+      }, 5000);
+    });
+  </script>
 </head>
 <body>
   <header>
