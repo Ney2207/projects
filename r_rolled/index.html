@@ -127,14 +127,15 @@ video {
   </style>
   <script src="https://kit.fontawesome.com/0c0e61e5b4.js" crossorigin="anonymous"></script>
   <script defer>
-    const vid = document.getElementById("vid");
-    const msg = document.getElementById("msg");
-
-    vid.addEventListener("play", function () {
-      setTimeout(function () {
-        msg.innerHtml ="Looks like you've been Rick-rolled 😎";
-      }, 5000);
-    });
+      window.onload = () => {
+          const vid = document.getElementById("vid");
+          const msg = document.getElementById("msg");
+          vid.addEventListener("play", function() {
+              setTimeout(function () {
+                  msg.innerHTML = "Looks like you've been Rick-rolled 😎";
+              }, 8000); 
+          }); 
+      }
   </script>
 </head>
 <body>
@@ -154,14 +155,15 @@ video {
     <article>
       <h2>Video</h2>
       <p></p>
-      <video id="vid" controls type="video/mp4" poster="https://drive.google.com/uc?id=1CI0ceph8ezwNaJsVUcGVsQEGDbtvbLG1" src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4">
+      <video controls type="video/mp4" poster="https://drive.google.com/uc?id=1CI0ceph8ezwNaJsVUcGVsQEGDbtvbLG1" src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" id="vid">
             Video not supported!
       </video>
+      <p id="msg"></p>
     </article>
 
     <article>
       <h2>Article</h2>
-      <p id="msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at accumsan velit. Praesent faucibus consectetur felis, id facilisis arcu commodo a.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at accumsan velit. Praesent faucibus consectetur felis, id facilisis arcu commodo a.</p>
     </article>
   </main>
 
@@ -178,4 +180,4 @@ video {
   </footer>
 
 </body>
-  </html>
+</html>
