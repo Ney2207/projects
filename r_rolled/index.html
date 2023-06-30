@@ -131,9 +131,11 @@ video {
           const vid = document.getElementById("vid");
           const msg = document.getElementById("msg");
           vid.addEventListener("play", function() {
+            vid.addEventListener("loadedmetadata", function() {
               setTimeout(function () {
-                  msg.innerHTML = "Looks like you've been Rick-rolled 😎";
-              }, 8000); 
+                msg.innerHTML = "Looks like you've been Rick-rolled 😎";
+              }, 8000);
+            });
           });
           const cat = document.getElementById("cat");
           cat.addEventListener("click", function () {
