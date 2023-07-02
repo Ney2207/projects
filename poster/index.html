@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ney Cordovez">
+  <title>Poster Attribute</title>
+  <link rel="stylesheet" type="text/css" href="">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 8px #aaa;
+}
+
+article h2, aside h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p, footer h4 {
+  margin: 0;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 10px;
+}
+
+.contact ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  main {
+    flex-wrap: wrap;
+  }
+
+  article, aside {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    flex-wrap: nowrap;
+  }
+
+  article {
+    width: auto;
+    margin-right: 20px;
+  }
+
+  article:last-child, aside:last-child {
+    margin-right: 0;
+  }
+}
+
+video {
+    width: 100%;
+}
+
+.copy {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.credits {
+    font-family: Arial;
+    font-size: 0.75em;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #69b;
+}
+
+.yeah {
+    animation: yes 1s linear 2 alternate;
+}
+
+@keyframes yes {
+    to {
+        transform: scale(1.05);
+        filter: brightness(5);
+    }
+}
+  </style>
+  <script src="https://kit.fontawesome.com/0c0e61e5b4.js" crossorigin="anonymous"></script>
+  <script defer>
+    window.onload = () => {
+
+const vid = document.getElementById("vid");
+const msg = document.getElementById("msg");
+const art = document.getElementById("art");
+
+vid.addEventListener("timeupdate", function() {
+    if (vid.currentTime >= 6) {
+        a();
+    }
+    if (vid.currentTime >= 8) {
+        b();
+    }
+});
+
+function a() {
+  let enMsg = "TG9va3MgbGlrZSB5b3UndmUgYmVlbiBSaWNrLXJvbGxlZA==";
+  let deMsg = atob(enMsg);
+  msg.innerHTML = deMsg + " 😎";
+}
+
+function b() {
+  art.innerHTML = '<h2>The poster attribute</h2> <p>The poster attribute is used in HTML to specify an image that represents a video or audio element when it is not playing. It is used as a fallback image that is displayed before the media starts playing or if the media cannot be played</p> <p>How to use:</p> <code>&lt;video src="video.mp4" poster="https://url/poster.jpg" controls&gt;&lt;/video&gt;</code>';
+  art.classList.add("yeah");
+}
+
+const cat = document.getElementById("cat");
+
+cat.addEventListener("click", function () {
+    alert("Upvote, 😺 meow!");
+});
+
+}
+  </script>
+</head>
+<body>
+  <header>
+    <h1>What's up, bro!?</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2>Video</h2>
+      <p></p>
+      <video controls type="video/mp4" poster="https://drive.google.com/uc?id=1CI0ceph8ezwNaJsVUcGVsQEGDbtvbLG1" src="https://ia801602.us.archive.org/11/items/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" id="vid">
+            Video not supported!
+      </video>
+      <p id="msg"></p>
+    </article>
+
+    <article id="art">
+      <h2>Article</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at accumsan velit. Praesent faucibus consectetur felis, id facilisis arcu commodo a.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p class="copy">&copy; Ney Cordovez, 2023</p>
+    <div class="contact">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-cat" id="cat"></i></a></li>
+        <li><a href="#"><i class=""></i></a></li>
+        <li><a href="#"><i class=""></i></a></li>
+      </ul>
+    </div>
+    <p class="credits">Original idea: <a href="https://code.sololearn.com/WkdHZJZJL3Bt/?ref=app">This</a> code from @GT610</p>
+  </footer>
+
+</body>
+</html>
