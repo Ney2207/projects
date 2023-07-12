@@ -189,6 +189,33 @@ cat.addEventListener("click", function () {
 });
 
 }
+
+const toCopy = document.getElementsById('tc');
+
+toCopy.addEventListener('mousedown', copyText);
+toCopy.addEventListener('touchstart', copyText);
+
+function copyText() {
+  // Selecciona el contenido del elemento de texto
+  const textoSeleccionado = window.getSelection();
+  const rango = document.createRange();
+  rango.selectNodeContents(toCopy);
+  textoSeleccionado.removeAllRanges();
+  textoSeleccionado.addRange(rango);
+
+  // Intenta copiar el texto al portapapeles
+  try {
+    document.execCommand('copy');
+    console.log('Texto copiado al portapapeles');
+    // Aquí puedes agregar tu lógica adicional después de copiar el texto
+  } catch (err) {
+    console.error('Error al copiar el texto', err);
+  }
+
+  // Limpia la selección de texto
+  textoSeleccionado.removeAllRanges();
+}
+
   </script>
 </head>
 <body>
