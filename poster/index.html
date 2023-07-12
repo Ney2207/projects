@@ -204,10 +204,10 @@ function copyText() {
   // Intenta copiar el texto al portapapeles
   try {
     document.execCommand('copy');
-    console.log('Texto copiado al portapapeles');
+    alert('Texto copiado al portapapeles');
     // Aquí puedes agregar tu lógica adicional después de copiar el texto
   } catch (err) {
-    console.error('Error al copiar el texto', err);
+    alert('Error al copiar el texto', err);
   }
 
   // Limpia la selección de texto
