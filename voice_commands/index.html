@@ -31,6 +31,7 @@
     
     annyang.setLanguage('es-VE');
     annyang.addCommands(commands);
+    annyang.start({ autoRestart: true, continuous: false });
     }
     
     function hello() {
@@ -70,7 +71,7 @@
         body.style.color= '000';
         body.innerHTML='VERDE';
     }
-    
+    /*
     // Tell KITT to use annyang
     SpeechKITT.annyang();
     
@@ -78,7 +79,7 @@
     SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
     
     // Render KITT's interface
-    SpeechKITT.vroom();
+    SpeechKITT.vroom();*/
     </script>
     
     </body>
