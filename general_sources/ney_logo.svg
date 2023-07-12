@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewbox="0 0 200 200">
 	<style>
 		@font-face {
-		font-family: 'VarelaRound-Regular';
+		font-family: 'Varela Round';
 		src: url('https://ney2207.github.io/projects/general_sources/VarelaRound-Regular.svg') format('svg');
 		}
 	</style>
      
 	<rect width="100%" height="100%" fill="black" />
 	<circle cx="100" cy="100" r="80" fill="url(#gradiente)" stroke="white" stroke-width="2" />
-	<text x="45" y="154" font-size="150" fill="none" font-family="url(#VarelaRound-Regular), Arial" font-weight="bold" stroke="white" stroke-width="8"> N </text>
+	<text x="45" y="154" font-size="150" fill="none" font-family="'Varela Round', Arial" font-weight="bold" stroke="white" stroke-width="8"> N </text>
 	<defs>
 		<linearGradient id="gradiente" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop offset="0%" style="stop-color: #0f0;" />
+			<stop offset="0%" style="stop-color: #0f0;" />
 			<stop offset="100%" style="stop-color: #00f;" />
 		</linearGradient>
- </defs>
+	</defs>
 </svg>
