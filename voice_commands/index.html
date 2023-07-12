@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voice commands</title>
+    <style type="text/css" media="all">
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Page with voice commands</h1>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+    <script>
+    if (annyang) {
+        var commands = {
+            'hello': hello,
+            'hi': function() {
+                alert("Hello, world!");
+            },
+            'negro': black,
+            'blanco': white,
+            'rojo': red,
+            'verde': green,
+            'azul': blue,
+        };
+    
+    annyang.setLanguage('es-VE');
+    annyang.addCommands(commands);
+    }
+    
+    function hello() {
+        const helloMsg = document.createElement('h2');
+        helloMsg.innerHTML = "HELLO";
+        document.body.appendChild(helloMsg);
+    }
+    
+    const body = document.querySelector('body');
+    
+    function black() {
+        body.style.backgroundColor= '#000';
+        body.style.color= 'fff';
+        body.innerHTML='NEGRO';
+    }
+    
+    function white() {
+        body.style.backgroundColor= '#fff';
+        body.style.color= '000';
+        body.innerHTML='BLANCO';
+    }
+    
+    function red() {
+        body.style.backgroundColor= '#f00';
+        body.style.color= '000';
+        body.innerHTML='ROJO';
+    }
+    
+    function blue() {
+        body.style.backgroundColor= '#00f';
+        body.style.color= '000';
+        body.innerHTML='AZUL';
+    }
+    
+    function green() {
+        body.style.backgroundColor= '#0f0';
+        body.style.color= '000';
+        body.innerHTML='VERDE';
+    }
+    
+    // Tell KITT to use annyang
+    SpeechKITT.annyang();
+    
+    // Define a stylesheet for KITT to use
+    SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
+    
+    // Render KITT's interface
+    SpeechKITT.vroom();
+    </script>
+    
+    </body>
+</html>
+
+<!--
+<script>
+var commands = {
+  // annyang will capture anything after a splat (*) and pass it to the function.
+  // e.g. saying "Show me Batman and Robin" is the same as calling showFlickr('Batman and Robin');
+  'show me *tag': showFlickr,
+
+  // A named variable is a one word variable, that can fit anywhere in your command.
+  // e.g. saying "calculate October stats" will call calculateStats('October');
+  'calculate :month stats': calculateStats,
+
+  // By defining a part of the following command as optional, annyang will respond to both:
+  // "say hello to my little friend" as well as "say hello friend"
+  'say hello (to my little) friend': greeting
+};
+
+var showFlickr = function(tag) {
+  var url = 'http://api.flickr.com/services/rest/?tags='+tag;
+  $.getJSON(url);
+}
+
+var calculateStats = function(month) {
+  $('#stats').text('Statistics for '+month);
+}
+
+var greeting = function() {
+  $('#greeting').text('Hello!');
+}
+
+</script>
+-->
